@@ -1,6 +1,7 @@
 export { default as IcBack } from "./IcBack";
 export { default as IcCart } from "./IcCart";
 export { default as IcCheckCoupon } from "./IcCheckCoupon";
+export { default as IcClock } from "./IcClock";
 export { default as IcEmptyHeart } from "./IcEmptyHeart";
 export { default as IcFillHeart } from "./IcFillHeart";
 export { default as IcFilter } from "./IcFilter";

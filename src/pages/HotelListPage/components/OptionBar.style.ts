@@ -11,6 +11,7 @@ const optionButton = css`
   align-items: center;
   justify-content: center;
   padding: 0.4rem 1.5rem;
+  gap: 0.4rem;
 
   border-radius: 100px;
   border: 1px solid ${theme.color.gray300};

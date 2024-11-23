@@ -50,7 +50,7 @@ const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
       <div css={hotelInfoWrapper}>
         {/* 우측 상단 호텔 상세 정보 */}
         <div css={hotelDescriptionWrapper}>
-          <h2 css={hotelTitle}>{hotelName}</h2>
+          <h3 css={hotelTitle}>{hotelName}</h3>
           <StarRating rating={star} variant='default' />
           <div css={hotelDetailWrapper}>
             <div css={hotelLocation}>

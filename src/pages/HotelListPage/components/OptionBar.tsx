@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   optionButton,
   optionWrapper,
@@ -6,9 +5,12 @@ import {
   activeText,
 } from './OptionBar.style';
 
-const OptionBar = () => {
-  const [isLimitedSaleActive, setIsLimitedSaleActive] = useState(false);
+interface OptionBarProps {
+  toggleTimeSale: () => void;
+  showTimeSale: boolean;
+}
 
+const OptionBar = ({ toggleTimeSale, showTimeSale }: OptionBarProps) => {
   return (
     <div css={optionWrapper}>
       <button css={optionButton}>
@@ -18,8 +20,8 @@ const OptionBar = () => {
       </button>
 
       <button
-        css={[optionButton, isLimitedSaleActive && activeBorderButton]}
-        onClick={() => setIsLimitedSaleActive(!isLimitedSaleActive)}
+        css={[optionButton, showTimeSale && activeBorderButton]}
+        onClick={toggleTimeSale}
       >
         시간 한정 세일 보기
       </button>
