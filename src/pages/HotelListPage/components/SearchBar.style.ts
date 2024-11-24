@@ -32,6 +32,7 @@ const dot = css`
 
 const searchIcon = css`
   margin-left: 2rem;
+  color: ${theme.color.gray700};
 `;
 
 const location = css`

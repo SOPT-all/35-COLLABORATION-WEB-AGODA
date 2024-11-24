@@ -1,5 +1,5 @@
 import { HOTEL_LIST_DATA } from '@utils/mocks/hotelListData';
-import HotelListCard from './components/HotelListCard';
+import HotelListCard from './components/HotelListCard/HotelListCard';
 import {
   hotelListHeaderContainer,
   cardWrapper,
