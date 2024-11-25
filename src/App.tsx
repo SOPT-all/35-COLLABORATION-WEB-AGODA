@@ -4,16 +4,15 @@ import theme from "@styles/theme";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import pageRoutes from "@/routes/pageRoutes";
 
+
 const App = () => {
   const router = createBrowserRouter([...pageRoutes]);
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Global styles={GlobalStyle} />
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <Global styles={GlobalStyle} />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 };
 
