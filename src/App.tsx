@@ -21,15 +21,10 @@ const App = () => {
 
   return (
     <>
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={theme}>
-          <Global styles={GlobalStyle} />
-          <RouterProvider router={router} />
-        </ThemeProvider>
-        <div style={{ fontSize: '16px' }}>
-          <ReactQueryDevtools />
-        </div>
-      </QueryClientProvider>
+      <ThemeProvider theme={theme}>
+        <Global styles={GlobalStyle} />
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </>
   );
 };

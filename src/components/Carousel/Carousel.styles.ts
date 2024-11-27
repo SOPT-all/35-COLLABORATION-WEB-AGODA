@@ -30,6 +30,5 @@ export const carouselContainer = css`
 export const image = css`
   width: 100%;
   height: auto;
-  border-radius: 10px;
   object-fit: cover;
 `;

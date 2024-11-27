@@ -1,7 +1,7 @@
-import { HotelList } from '@app-types/hotelList';
-import { IcEmptyHeart, IcFillHeart, IcMap, TagLightred } from '@assets/svg';
-import { iconStyle } from '@styles/iconStyles';
-import StarRating from '@components/StarRating/StarRating';
+import { HotelList } from "@app-types/hotelList";
+import { IcEmptyHeart, IcFillHeart, IcMap, TagLightred } from "@assets/svg";
+import { iconStyle } from "@styles/iconStyles";
+import StarRating from "@components/StarRating/StarRating";
 import {
   hotelCardWrapper,
   hotelInfoWrapper,
@@ -19,7 +19,7 @@ import {
   hotelDiscountPrice,
   hotelTaxPrice,
   hotelTagPrice,
-} from './HotelListCard.style';
+} from "./HotelListCard.style";
 
 const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
   const {
@@ -38,17 +38,15 @@ const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
 
   return (
     <article css={hotelCardWrapper}>
-      {/* 좌측 이미지 */}
       <div>
         <img
-          src={hotelImage ?? 'https://placehold.co/144x180'}
+          src={hotelImage ?? "https://placehold.co/144x180"}
           alt={hotelName}
           css={hotelCardImage}
         />
       </div>
 
       <div css={hotelInfoWrapper}>
-        {/* 우측 상단 호텔 상세 정보 */}
         <div css={hotelDescriptionWrapper}>
           <h3 css={hotelTitle}>{hotelName}</h3>
           <StarRating rating={star} variant='default' />
@@ -71,7 +69,6 @@ const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
           )}
         </div>
 
-        {/* 우측 하단 호텔 가격 */}
         <div css={hotelPriceWrapper}>
           {discountPrice > 0 && (
             <p css={hotelOriginalPrice}>₩ {originalPrice.toLocaleString()}</p>
