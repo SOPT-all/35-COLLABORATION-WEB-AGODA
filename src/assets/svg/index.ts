@@ -2,7 +2,7 @@ export { default as Ellipse27 } from "./Ellipse27";
 export { default as Ellipse28 } from "./Ellipse28";
 export { default as Emptyheart } from "./Emptyheart";
 export { default as Fillheart } from "./Fillheart";
-export { default as Bestseller } from "./Bestseller";
+export { default as Bestseller } from "./bestseller";
 export { default as IcActivity } from "./IcActivity";
 export { default as IcBack } from "./IcBack";
 export { default as IcBackWhite } from "./IcBackWhite";
