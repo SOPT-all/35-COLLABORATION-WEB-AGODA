@@ -1,5 +1,5 @@
-import { IcFilter, IcMap, IcSearch } from '@assets/svg';
-import { iconStyle } from '@styles/iconStyles';
+import { IcFilter, IcMap, IcSearch } from "@assets/svg";
+import { iconStyle } from "@styles/iconStyles";
 import {
   hotelListHeaderWrapper,
   location,
@@ -8,7 +8,7 @@ import {
   searchIcon,
   dot,
   iconBorder,
-} from './SearchBar.style';
+} from "./SearchBar.style";
 
 const cityNames: Record<number, string> = {
   1: '서울',

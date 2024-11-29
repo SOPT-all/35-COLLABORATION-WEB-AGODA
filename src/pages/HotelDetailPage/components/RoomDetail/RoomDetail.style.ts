@@ -1,14 +1,14 @@
 import { Theme } from "@emotion/react";
 import { css } from "@emotion/react";
 
-export const roomDetailLayout = (theme: Theme) => css`
+export const roomDetailLayout = css`
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
 
   padding: 0rem 2rem;
-  /* background-color: ${theme.color.gray200}; */
+  margin-bottom: 1rem;
 `;
 
 export const roomDetailOneClickWrapper = css`

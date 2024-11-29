@@ -20,9 +20,12 @@ import {
   hotelTaxPrice,
   hotelTagPrice,
 } from "./HotelListCard.style";
+import { useNavigate } from "react-router-dom";
+import routePath from "@routes/routePath";
 
 const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
   const {
+    hotelId,
     hotelName,
     star,
     hotelDistrict,
@@ -36,8 +39,13 @@ const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
     isQuarterDiscount,
   } = hotel;
 
+  const navigate = useNavigate();
+  const handleCardClick = (hotelId: number) => {
+    navigate(routePath.HOTEL_DETAIL.replace(":hotelId", String(hotelId)));
+  };
+
   return (
-    <article css={hotelCardWrapper}>
+    <article css={hotelCardWrapper} onClick={() => handleCardClick(hotelId)}>
       <div>
         <img
           src={hotelImage ?? "https://placehold.co/144x180"}
@@ -49,7 +57,7 @@ const HotelListCard = ({ hotel }: { hotel: HotelList }) => {
       <div css={hotelInfoWrapper}>
         <div css={hotelDescriptionWrapper}>
           <h3 css={hotelTitle}>{hotelName}</h3>
-          <StarRating rating={star} variant='default' />
+          <StarRating rating={star} variant="default" />
           <div css={hotelDetailWrapper}>
             <div css={hotelLocation}>
               <IcMap css={iconStyle(1.2, 2)} />

@@ -1,4 +1,4 @@
-import { IcBackWhite, IcCancle, IcSearch } from "@assets/svg";
+import { IcBackWhite, IcCancle, IcCitySearch } from "@assets/svg";
 import {
   cityHeaderBackIconStyle,
   cityHeaderCancleIconStyle,
@@ -41,7 +41,7 @@ const CityHeader = () => {
       </div>
 
       <div css={cityHeaderInputWrapper}>
-        <IcSearch css={cityHeaderSearchIconStyle} />
+        <IcCitySearch css={cityHeaderSearchIconStyle} />
         <input
           placeholder="도시, 숙소명, 관광 또는 여행지"
           css={cityHeaderInputStyle}

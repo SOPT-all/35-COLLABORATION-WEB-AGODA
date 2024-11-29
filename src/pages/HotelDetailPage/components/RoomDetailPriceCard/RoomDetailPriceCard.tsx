@@ -22,7 +22,7 @@ import {
   priceInfoTextStyle,
   PriceInfoWrapper,
 } from "@pages/HotelDetailPage/components/RoomDetailPriceCard/RoomDetailPriceCard.style";
-import { ROOM_DETAIL_CARD_PRICE_DATA } from "@utils/constants/roomDetailPriceData";
+import { ROOM_DETAIL_CARD_PRICE_DATA } from "@utils/constants/hotelDetail/roomDetailPriceData";
 
 const RoomDetailPriceCard = () => {
   const randomIndex = Math.floor(

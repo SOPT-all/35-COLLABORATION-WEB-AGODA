@@ -16,11 +16,6 @@ export const searchIconStyle = css`
   color: ${theme.color.gray600};
 `;
 
-export const personIconStyle=css`
-  padding: 0;
-  margin: 0 0.8rem 0 1.2rem;
-`;
-
 export const buttonStyle = css`
   display: flex;
   align-items: center;
@@ -70,9 +65,11 @@ export const boxStyle = css`
   height: 4.4rem;
   border-radius: 5px;
   border: 1px solid ${theme.color.gray300};
-  gap: 0.4rem;
 `;
 
+export const boxSpanStyle=css`
+  gap: 0.4rem;
+`;
 export const textStyle = css`
   ${theme.font.body2_m_14}
   color: ${theme.color.gray700};

@@ -27,3 +27,7 @@ export type RoomImageType = {
   roomImageId: number;
   roomImageUrl: string;
 };
+
+export interface RoomDetailResponse {
+  rooms: RoomDataType[];
+}

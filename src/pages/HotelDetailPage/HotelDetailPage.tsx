@@ -18,21 +18,33 @@ import {
   IsLikedWrapper,
 
 } from "@pages/HotelDetailPage/HotelDetailPage.style";
+
 import { useFetchHotelDetail } from "@apis/hoteldetail/useFetchHotelDetail";
+  
+  
+import { useFetchRoomDetail } from "@apis/hoteldetail/useFetchRoomDetail";
+import { useParams } from "react-router-dom";
+import RoomDescription from "@pages/HotelDetailPage/components/RoomDescription/RoomDescription";
 
 const HotelDetailPage = () => {
   const { hotelId } = useParams();
-  const { data: hotelDetail, isLoading: hotelDetailLoading } =
+  const { data: roomData } = useFetchRoomDetail(Number(hotelId));
+  
+    const { data: hotelDetail } =
     useFetchHotelDetail(Number(hotelId));
-
-  // 로딩 중 처리
-  if (hotelDetailLoading) {
-    return <div>Loading...</div>;
-  }
 
   if (!hotelDetail || !hotelDetail.hotelImages) {
     return <div>No images available</div>;
   }
+
+  const rooms = roomData?.rooms || [];
+  const handleScrollToTopButtonClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
 
   return (
     <div css={HotelDetailLayout}>
@@ -58,7 +70,9 @@ const HotelDetailPage = () => {
         <TextReview />
         <Location />
       </div>
-      <RoomDetail />
+
+      <RoomDetail roomData={rooms} />
+      <RoomDescription handleScrollToTopButtonClick={handleScrollToTopButtonClick}/>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { RoomDataType } from "@app-types/hotelDetail";
-import { IcBath, IcBed, IcPeople, IcRoom } from "@assets/svg";
+import { IcBath, IcBed, IcPeopleBlack, IcRoomBlack } from "@assets/svg";
 import Carousel from "@components/Carousel/Carousel";
 import { roomDetailCardContainer } from "@pages/HotelDetailPage/components/RoomDetail/RoomDetail.style";
 import {
@@ -44,7 +44,7 @@ const RoomDetailCard = ({ roomData }: RoomDetailCardProps) => {
         <div css={roomOptionContainer}>
           <div css={roomOptionWrapper}>
             <div css={roomOptionStyle}>
-              <IcRoom css={roomOptionIconStyle} />
+              <IcRoomBlack css={roomOptionIconStyle} />
               <span css={roomOptionTextStyle}>{spaceSize}㎡</span>
             </div>
             <div css={roomOptionStyle}>
@@ -60,7 +60,7 @@ const RoomDetailCard = ({ roomData }: RoomDetailCardProps) => {
               </span>
             </div>
             <div css={roomOptionStyle}>
-              <IcPeople css={roomOptionIconStyle} />
+              <IcPeopleBlack css={roomOptionIconStyle} />
               <span css={roomOptionTextStyle}>최대 성인 {maxCapacity}명</span>
             </div>
           </div>
