@@ -7,7 +7,7 @@ const getHotelDetail = async (hotelId: number) => {
     const response = await instance.get(END_POINT.GET_HOTEL_DETAIL(hotelId));
     return response.data.data;
   } catch (error) {
-    console.error(error);
+    thorw error;
   }
 };
 
