@@ -13,10 +13,9 @@ export { default as IcCalendar } from "./IcCalendar";
 export { default as IcCancle } from "./IcCancle";
 export { default as IcCar } from "./IcCar";
 export { default as IcCart } from "./IcCart";
+
 export { default as IcCart2 } from "./IcCart2";
 export { default as IcCarBus } from "./IcCarBus";
-export { default as IcCart } from "./IcCart";
-export { default as IcCart2 } from "./IcCart2";
 export { default as IcCheck } from "./IcCheck";
 export { default as IcCheckCoupon } from "./IcCheckCoupon";
 export { default as IcCheckin } from "./IcCheckin";
